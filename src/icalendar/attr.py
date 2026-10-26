@@ -2217,7 +2217,7 @@ def _get_links(self: Component) -> list[vUri | vUid | vXmlReference]:
 
 
 LINKS_TYPE_SETTER: TypeAlias = (
-    str | vUri | vUid | vXmlReference | None | list[str | vUri | vUid | vXmlReference]
+    str | vUri | vUid | vXmlReference | list[str | vUri | vUid | vXmlReference] | None
 )
 
 
@@ -2242,7 +2242,7 @@ def _del_links(self: Component) -> None:
 links_property = property(_get_links, _set_links, _del_links)
 
 RELATED_TO_TYPE_SETTER: TypeAlias = (
-    None | str | vText | vUri | vUid | list[str | vText | vUri | vUid]
+    str | vText | vUri | vUid | list[str | vText | vUri | vUid] | None
 )
 
 
